@@ -1,0 +1,84 @@
+<!-- <div class="container">
+  <div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Login</h2>
+
+    <form #frmLogin="ngForm" class="login-container">
+      <p>
+        <input class="form-control" name="email" [(ngModel)]="usuario.email" placeholder="Email" type="email" required>
+      </p>
+      <p>
+        <input class="form-control" name="password" [(ngModel)]="usuario.password" placeholder="Password" type="password" required>
+      </p>
+      
+        <div class="col text-center">
+        <button type="submit" class="btn btn-info my-4" aling="center" (click)="login()">
+          <span>Iniciar Sesión</span>
+        </button>
+      </div>
+      
+    </form>
+  </div>
+</div> -->
+
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+
+
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2 style="color:#e95e38;"> Application<br> Login Page</h2>
+    <p>Login here to access.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+					<div class="card-body px-lg-5 py-lg-3">
+						<div class="text-center mb-4">
+							<small>Iniciar Sesión</small>
+						</div>
+						<form #loginForm=ngForm >
+							<div class="form-group mb-3">
+								<div class="input-group input-group-alternative">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="users_circle-08"></i></span>
+									</div>
+									<input class="form-control" name="username" [(ngModel)]="usuario.email" placeholder="Email" type="email" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group input-group-alternative">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="ui-1_lock-circle-open"></i></span>
+									</div>
+									<input class="form-control" name="password" [(ngModel)]="usuario.password" placeholder="Password" type="password" required>
+								</div>
+              				</div>
+
+							<!-- <div class="loader" *ngIf="loading">Cargando...</div> -->
+
+							<div class="text-center">
+								<!-- <button type="submit" class="btn btn-primary my-4" (click)="login()" [disabled]="!loginForm.valid">Iniciar
+                  Sesión</button> -->
+
+                  <button type="submit" class="btn btn-primary my-4" (click)="login()" [disabled]="!loginForm.valid || loading">
+                      <i [ngClass]="{'': !loading, 'fa-sync-alt fa-spin': loading}"  class="fa "></i>
+                      <span *ngIf="!loading">Iniciar Sesión</span>
+                      <span *ngIf="loading">Iniciando</span>
+                    </button>
+							</div>
+							 <div class="alert alert-primary alert-dismissible fade show mt-4" role="alert" *ngIf="errorCredenciales">
+								<button (click)="close()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true" >×</span>
+								</button>
+
+								<span class="alert-inner--text"><strong>Ups!</strong>
+								<p>Credenciales incorrectas</p>
+								</span>
+							</div>
+						</form>
+					</div>
+</div>
+</div>

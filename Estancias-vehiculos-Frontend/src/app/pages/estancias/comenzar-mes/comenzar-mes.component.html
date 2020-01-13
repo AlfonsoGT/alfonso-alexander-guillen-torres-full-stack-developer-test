@@ -1,0 +1,35 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Iniciar mes</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row" class="d-flex justify-content-center">
+              <div class="alert alert-danger" role="alert">
+                <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                <span class="alert-inner--text"><strong>Adventencia!</strong> <br>Si presiona el boton "Aceptar":
+                  <ul>
+                    <li>Se eliminaran las estancias registradas de vehiculos oficiales</li>
+                    <li>El tiempo estacionado de vehiculos residenciales se pondra a cero</li>
+                    
+                  </ul>
+                
+                </span>
+              </div>
+             
+            </div>
+
+            <button type="button" class="btn btn-primary my-4" (click)="inicioMes()">Aceptar</button>
+            <button type="button" class="btn btn-secondary my-4" [routerLink]="['/dashboard']">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
