@@ -1,0 +1,24 @@
+/* vehiculos oficiales */
+
+    placa : P111
+    placa : P222
+    placa : P333
+    placa : P444
+    placa : P555
+
+/* vehiculos residentes */
+
+    placa : P666
+    placa : P777
+    placa : P888
+    placa : P999
+    placa : P101010
+
+/* vehiculos no residentes */
+
+    placa : P111111
+    placa : P121212
+    placa : P131313
+    placa : P141414
+    placa : P151515
+

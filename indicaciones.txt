@@ -1,0 +1,47 @@
+/***Indicaciones para ejecutar proyecto de backend***/
+- colocarce en la raiz del proyecto de "Estancias-vehiculos-Backend"
+- configurar algunos permisos con el siguiente comando
+	sudo chmod -R 755 storage
+- instalar dependencias
+	composer install
+	composer update
+-crear el archivo de configuración de Laravel, este archivo se excluye del repositorio por medidas de seguridad. Sin embargo  existe un archivo llamado .env.example que es un ejemplo de como crear un el archivo de configuración, podemos copiar este archivo desde la consola con:
+	cp .env.example .env
+
+Es importante que tenga los siguientes valores que establecen la conexión a la bd y que se haya creado la base de datos llamada "estacionamiento"
+se adjunta un ejemplo de la configuracion de este archivo .env
+	DB_CONNECTION=mongodb
+	DB_HOST=localhost
+	DB_PORT=27017
+	DB_DATABASE=estacionamiento
+	DB_USERNAME=
+	DB_PASSWORD=
+
+- Generar nuestra key con el siguiente comando:
+	php artisan key:generate
+- Generamos nuestra llave para el token con el siguiente comando(sin esto no se podra autenticar en el sistema)
+	php artisan jwt:secret
+
+- Luego hacer las migracines y ejecutar los seeders que contienen los datos de prueba
+	php artisan migrate --seed
+
+- por ultimo levantamos el servidor con e4l siguiente comando:
+	php artisan serve
+
+
+/***Indicaciones para ejecutar proyecto de frontend***/
+
+- colocarce en la raiz del proyecto "Estancias-vehiculos-Frontend"
+- ejecutar el siguiente comando para instalar las dependencias del proyecto
+	npm install
+-para ejecutar el servidor ejecutamos el siguiente comando
+	sudo ng serve
+
+
+- ahora entre a la siguiente direccion desde su nevaegador 
+	http://localhost:4200
+	con el usuario: usuario@hello.com
+	    contraseña: usuario1234
+
+
+
